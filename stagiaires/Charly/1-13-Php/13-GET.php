@@ -7,34 +7,35 @@ if(isset($_GET['section']))
 {
     // switch
     switch($_GET['section']):
-    case "biographie":
+        case "biographie":
             $title = "Ma vie";
             $text = "\"Ma vie\" est une chanson composée et interprétée par Alain Barrière, sortie en 1964. Elle est la chanson-titre 
             du 45 tours sur lequel elle est pressée.
             
-                Le titre est l'un des plus connus de l'interprète à travers le monde.";
-        break;
-    case "contact":
-        $title = "contact";
-        $text = "ONGEMBA NGONGO Charly 89, avenue du Parc
-          1060 St-Gilles"   ;
-        break;
-    case "livredor":
-        $title = "Livre d'or";
-        $text = "Laisser nous un message";
-        break;
-    case "actualites":
-        $title = "Actualité";
-        $text = "Jusqu'ici tout va bien";
-        break;
-           
+Le titre est l'un des plus connus de l'interprète à travers le monde.";
+            break;
+        case "contact":
+            $title = 'Mon contact';
+            $text = 'Mon mail: example@cf2000m.be 
+            Tel : 32 324424552';
+            break;
+        case "livredor":
+            $title = "Livre d'or";
+            $text = "Même le livre d'or que je suis, n'arrive pas a la cheville de la Bible : )";
+            break;
+        # valeur par défaut : else
+        case "actualites":
+            $title = "Actualités";
+            $text = "Voici l'actualité de la semaine : blabla";
+            break;
         default:
-            $title ="Error 404";
+            $title =404;
             $text = "Error 404 - PAGE NOT FOUND";
-    endswitch;}
+
+    endswitch;
 
 // pas de variable get nommée section
-else{
+}else{
     // Nous sommes sur l'accueil
     $title = "Accueil";
     $text = "Bienvenue sur notre page d'accueil";
